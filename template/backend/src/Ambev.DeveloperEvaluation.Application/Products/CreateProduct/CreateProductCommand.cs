@@ -15,7 +15,7 @@ public class CreateProductCommand : IRequest<CreateProductResult>
 
     public ValidationResultDetail Validate()
     {
-        var validator = new CreateProductRequestValidator();
+        var validator = new CreateProductCommandValidator();
         var result = validator.Validate(this);
         return new ValidationResultDetail
         {
@@ -23,5 +23,4 @@ public class CreateProductCommand : IRequest<CreateProductResult>
             Errors = result.Errors.Select(o => (ValidationErrorDetail)o)
         };
     }
-}
 }

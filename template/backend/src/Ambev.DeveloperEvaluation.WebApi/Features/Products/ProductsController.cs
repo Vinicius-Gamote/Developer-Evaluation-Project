@@ -5,11 +5,12 @@ using Ambev.DeveloperEvaluation.WebApi.Common;
 using Ambev.DeveloperEvaluation.Domain.Entities;
 using Ambev.DeveloperEvaluation.Domain.ValueObjects;
 using Ambev.DeveloperEvaluation.WebApi.Features.Products.CreateProduct;
+using Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
 
 namespace Ambev.DeveloperEvaluation.WebApi.Features.Users;
 
 /// <summary>
-/// Controller for managing user operations
+/// Controller for managing products operations
 /// </summary>
 [ApiController]
 [Route("api/[controller]")]
@@ -17,12 +18,6 @@ public class ProductsController : BaseController
 {
     private readonly IMediator _mediator;
     private readonly IMapper _mapper;
-
-    /// <summary>
-    /// Initializes a new instance of UsersController
-    /// </summary>
-    /// <param name="mediator">The mediator instance</param>
-    /// <param name="mapper">The AutoMapper instance</param>
     public ProductsController(IMediator mediator, IMapper mapper)
     {
         _mediator = mediator;
