@@ -2,7 +2,7 @@ using FluentValidation;
 
 namespace Ambev.DeveloperEvaluation.Application.Products.DeleteProduct
 {
-    public class DeleteProductRequestValidator : AbstractValidator<DeleteProductRequest>
+    public class DeleteProductRequestValidator : AbstractValidator<DeleteProductCommand>
     {
         public DeleteProductRequestValidator()
         {

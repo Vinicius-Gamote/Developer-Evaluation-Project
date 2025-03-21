@@ -7,5 +7,5 @@ public interface IProductRepository
     Task<IEnumerable<Product>> GetAllProductsAsync();
     Task<Product> CreateAsync(Product product, CancellationToken cancellationToken = default);
     Task UpdateProductAsync(Product product);
-    Task DeleteProductAsync(int id);
+    Task<bool> DeleteAsync(int id, CancellationToken cancellationToken = default);
 }
